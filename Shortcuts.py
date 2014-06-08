@@ -47,7 +47,7 @@ while choice != 'x':
 	menu()
 	choice = raw_input().lower()
 	if choice == '1':
-		while git_choice != '1' and git_choice != '0' and git_choice != '2' and git_choice != '3': 
+		while git_choice != '0': 
 			GitMenu()
 			git_choice = raw_input()
 			print
@@ -83,7 +83,7 @@ while choice != 'x':
 				print
 				
 	elif choice == '2':
-		while git_choice != '1' and git_choice != '0' and git_choice != '2' and git_choice != '3' and git_choice != '4' and git_choice!= '5': 
+		while git_choice != '0': 
 			LinuxMenu()
 			git_choice = raw_input()
 			print
