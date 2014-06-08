@@ -136,7 +136,9 @@ while choice != 'x':
 		sys.exit()
 		
 		
-		
+	else:
+		print "\n Not a valid choice"
+		print	
 		
 		
 		
