@@ -4,12 +4,15 @@
 # This Python Script when executed brings up a menu of various mini tutorials for GitHub, Python..
 
 #Importations
+
 import sys, os
 
 
 #Introduction
-print "Welcome to Shortcuts v0.0"
-print "Created June 7, 2014"
+print "Welcome to Shortcuts v0.1"
+print " Created June 7, 2014"
+print "  Modified on July 26, 2015"
+print 
 print
 
 #Variable Declaration
@@ -22,6 +25,7 @@ def menu():
 	print "Please choose one of the following mini tutorials options ( 1-5 or x to exit): "
 	print "1 - GitHub Commands"
 	print "2 - Common Linux Commands"
+	print "3 - OSX Commands"
 	print "x - exit"
 
 def GitMenu():
@@ -39,18 +43,26 @@ def LinuxMenu():
 	print "   4 - to be added"
 	print "   5 - to be added"
 	print "   0 - Return to Main Menu"
+	
+def OSX_Menu():
+	print "Please choose one of the following options (0-3): "
+	print "   1 - How to show only active apps in your OS X Dock"
+	print "   0 - Return to Main Menu"
 
 
 # Main Loop
 while choice != 'x':
 	git_choice = ''
 	menu()
+	print 
 	choice = raw_input().lower()
+	print 
 	if choice == '1':
 		while git_choice != '0': 
 			GitMenu()
-			git_choice = raw_input()
 			print
+			git_choice = raw_input()
+			print 
 		
 			if git_choice == '1':
 				print
@@ -85,6 +97,7 @@ while choice != 'x':
 	elif choice == '2':
 		while git_choice != '0': 
 			LinuxMenu()
+			print
 			git_choice = raw_input()
 			print
 		
@@ -131,6 +144,29 @@ while choice != 'x':
 				print "\n Not a valid choice"
 				print
 
+	elif choice == '3':
+		while git_choice != '0': 
+			OSX_Menu()
+			print
+			git_choice = raw_input()
+			print
+		
+			if git_choice == '1':
+				print
+				print "--> Type: defaults write com.apple.dock static-only -bool TRUE; killall Dock and press return."
+				print "  "
+				print "--> To return dock to normal type in: "
+#				print "  "
+				print "       defaults write com.apple.dock static-only -bool FALSE; killall Dock."
+				print 
+				
+			elif git_choice == '0':
+				print
+				break
+			
+			else:
+				print "\n Not a valid choice"
+				print
 	
 	elif choice == 'x':
 		sys.exit()
